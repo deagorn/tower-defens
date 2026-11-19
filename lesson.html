@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1023">
+  <meta name="description" content="Покроковий навчальний посібник Tower Defense у Roblox Studio">
+  <title>Tower Defense Academy · Здоров'я бази</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+  <script type="module" src="lesson-cloud.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Навігація уроком">
+      <div class="brand"><div class="brand-mark">✦</div><div><strong>TOWER DEFENSE</strong><span>ACADEMY / ROBLOX STUDIO</span></div></div>
+      <a href="index.html" class="outline-button" style="display:block;text-decoration:none;text-align:center;margin-bottom:18px">← До списку уроків</a><div class="side-divider"></div>
+      <div class="side-label">НАВЧАЛЬНИЙ МАРШРУТ</div>
+      <div class="lesson-pill"><span class="lesson-dot"></span><div><small>Демонстраційний урок</small><b>Здоров'я бази</b></div><span class="pill-indicator">↗</span></div>
+      <div class="progress-heading"><span>ЕТАПИ УРОКУ</span><span id="sideCount">0 / 7</span></div>
+      <div class="progress-rail"><div id="sideProgress"></div></div>
+      <nav id="stepList" class="step-list" aria-label="Кроки уроку"></nav>
+      <div class="sidebar-bottom"><div class="help-panel"><span>💡</span><div><b>Не встигаєш на уроці?</b><p>Повернися сюди пізніше. Прогрес зберігається онлайн у твоєму кабінеті.</p></div></div><button class="reset" id="resetProgress">↻ Скинути демопрогрес</button></div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+    <main class="workspace">
+      <header class="topbar"><div class="top-left"><button class="mobile-menu icon-button" id="menuButton" aria-label="Відкрити меню">☰</button><a class="breadcrumbs" href="index.html" style="text-decoration:none">← МОЇ УРОКИ</a><span class="breadcrumbs">/ ЗДОРОВ'Я БАЗИ</span></div><div class="top-right"><span class="autosave"><i></i> Деморежим · локальне збереження</span><button class="outline-button" id="libraryButton">⌘ Бібліотека коду</button></div></header>
+      <div class="content-wrap">
+        <div class="lesson-eyebrow"><span class="sparkle">✦</span> РОЗРОБКА ГРИ · ROBLOX STUDIO</div>
+        <div class="lesson-title-row"><div><h1>Здоров'я <em>бази</em><span class="heart">♥</span></h1><p class="subtitle">Створимо індикатор здоров'я й навчимо ворогів завдавати шкоди базі після проходження маршруту.</p></div><div class="lesson-badge">🛡️ <span>BASE HEALTH</span></div></div>
+        <div class="stats"><span>◈ <b>7</b> кроків</span><span>✦ Скриншоти з Roblox Studio</span><span>⌘ Lua + Explorer</span></div>
+        <div class="lesson-progress"><div class="progress-top"><div><b id="progressTitle">ПРОГРЕС УРОКУ</b><span id="progressSummary">0 з 7 кроків пройдено</span></div><span id="progressPercentage">0%</span></div><div class="progress-track"><div id="progressFill"></div></div></div>
+        <div class="step-header"><div class="step-tag" id="stepTag">КРОК 01 / 07</div><div class="step-category" id="stepCategory">ПІДГОТОВКА</div></div>
+        <article class="step-card" id="stepContent" aria-live="polite"></article>
+        <div class="actions"><button class="nav-button previous" id="prevButton">← <span>Назад</span></button><span class="nav-middle" id="navHint">Виконуй у Roblox Studio та переходь далі</span><button class="nav-button next" id="nextButton"><span>Далі</span> <span>→</span></button></div>
+        <div class="footnote">Прогрес зберігається онлайн у профілі учня. «Далі» означає, що учень пройшов інструкцію, а не автоматичну перевірку проєкту.</div>
+      </div>
+    </main>
+  </div>
+  <dialog id="imageDialog" class="image-dialog"><button id="closeImage" class="close-dialog" aria-label="Закрити">✕</button><img id="largeImage" alt="Збільшений скриншот"><p id="largeCaption"></p></dialog>
+  <dialog id="libraryDialog" class="library-dialog"><div class="dialog-head"><div><span class="mini-label">БІБЛІОТЕКА</span><h2>Код проєкту</h2></div><button class="close-dialog" id="closeLibrary" aria-label="Закрити">✕</button></div><p class="dialog-intro">Лише скрипти та версії, які стосуються цього демонстраційного уроку.</p><div id="libraryContent"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

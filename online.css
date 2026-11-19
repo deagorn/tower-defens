@@ -1,0 +1,23 @@
+#auth:empty{display:none}.login-card{max-width:480px;margin:40px auto;background:#151e34;border:1px solid #334366;padding:25px;border-radius:16px}.login-card h2{margin-top:0}.login-card p{font-size:13px;color:#afbed8;line-height:1.7}.login-card #sign-in{min-height:120px;display:flex;justify-content:center}.online-status{color:#aebfe0;font-size:12px;margin:0 0 20px}.progress-line{display:flex;justify-content:space-between;align-items:center;gap:10px}.student-note{font-size:12px;color:#c6a7ff}.lesson-card a.primary{display:inline-block}.small-label{font-size:11px;color:#a4b7d7}.button-inline{padding:8px 12px;font-size:11px}.student-row{flex-wrap:wrap}.student-details{min-width:160px}.student-side{max-width:220px}.status-error{border:1px solid #ac526f;background:#3b2134;padding:15px;border-radius:10px;color:#ffd4df;white-space:pre-wrap;font-size:12px}.connected-badge{color:#78d9b6}.progress-muted{color:#9aaaca;font-size:11px}.no-content{color:#b6adcc}
+
+/* v5.3 active/archive navigation */
+.archive-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.archive-tabs button.selected{background:#553d91;color:#fff;border-color:#966dea}.archive-search{padding:13px 17px;margin:12px 0}.archive-search label{display:block;font-size:12px;color:#adbbd8}.archive-search input{display:block;margin-top:6px;width:100%;box-sizing:border-box}.group-tabs{min-height:35px}
+
+/* v5.5.1: use the same dark input style as other dashboard forms. */
+.archive-search input,
+.archive-search input[type="text"] {
+  appearance:none; -webkit-appearance:none; display:block; width:100%;
+  margin-top:8px; padding:12px 13px; min-height:44px;
+  font:inherit; font-size:13px; line-height:1.4;
+  color:#f3f1ff; background:#0f172b; border:1px solid #465373;
+  border-radius:9px; box-shadow:none;
+}
+.archive-search input::placeholder {color:#8999b8; opacity:1;}
+.archive-search input:focus {outline:2px solid #8272d3; outline-offset:1px; border-color:#9b83f5;}
+.archive-search input:hover {border-color:#64749a;}
+
+/* v5.6: consistent student and teacher course analytics */
+.student-metrics{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0;color:#b9c9e8}
+.student-metrics span{padding:9px 12px;border:1px solid #334366;border-radius:10px;background:#121c34}
+.progress-entry{flex-wrap:wrap;gap:8px}
+.student-expanded .button-row a.secondary{display:inline-block;text-decoration:none;margin-bottom:12px}

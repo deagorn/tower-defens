@@ -1,0 +1,40 @@
+.course-main{max-width:1050px}.course-progress{height:8px;background:#25304c;border-radius:99px;overflow:hidden;margin:10px 0 24px}.course-progress div{height:100%;width:0;background:linear-gradient(90deg,#648dff,#b16bf6);transition:width .2s}.course-actions{display:flex;justify-content:space-between;gap:10px;margin-top:25px;padding-top:20px;border-top:1px solid #34405e}.course-actions button{padding:14px 22px}.course-block{margin:20px 0;line-height:1.8}.course-block p{white-space:pre-wrap;overflow-wrap:anywhere}.course-block h3{font-size:17px}.course-block .code-title{font:700 12px Manrope,sans-serif;letter-spacing:.5px;color:#c8b7ff}.lua-box{border:1px solid #303b57;border-left:4px solid #70aaff;background:#111521;border-radius:12px;overflow:hidden;margin:12px 0}.lua-top{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:12px 17px;border-bottom:1px solid #313950}.lua-top button{padding:7px 12px;border:1px solid #4f5972;border-radius:8px;background:#2b3040;color:#f1f3fe}.lua-box pre{white-space:pre;overflow:auto;margin:0;padding:18px;font:13px/1.7 Consolas,'Courier New',monospace;color:#e0e6ff;tab-size:4}.lua-box.no-copy pre{-webkit-user-select:none;user-select:none}.lua-box.no-copy{border-left-color:#b87bfa}.lua-muted{color:#a2b2d0;font-size:12px}.course-image{width:100%;max-height:650px;object-fit:contain;border:1px solid #35415b;border-radius:12px;background:#101729}.course-caption{font-size:12px;color:#a9b9d6}.embed-container{position:relative;width:100%;padding-top:56.25%;border:1px solid #374262;border-radius:13px;overflow:hidden;background:#080b14}.embed-container iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.extra-card{border:1px solid #7e59bb;background:#27223e;border-radius:13px;padding:20px}.tip-card{border-left:4px solid #f0c56b;background:#282638;border-radius:10px;padding:15px}.step-menu{display:grid;gap:7px}.step-menu button{padding:12px;text-align:left;background:#17213a;border:1px solid #333e5f;border-radius:9px;color:#cad7f0;font:inherit;font-size:12px;cursor:pointer}.step-menu button.active{background:#3b3565;border-color:#9c75e8}.step-menu button.done:before{content:'✓ ';color:#82dfaf}.course-block hr{border:0;border-top:1px solid #46506b;margin:25px 0}.unknown-block{border:1px dashed #ae915e;padding:15px;border-radius:9px;color:#e5d5b3}.course-main h2{font-size:23px;margin-top:4px}@media(max-width:900px){.frame{display:block}.rail{width:auto;min-height:auto}.course-main{padding:15px}.course-actions button{flex:1}}
+
+.lua-keyword{color:#df94ff}.lua-string{color:#99df9e}.lua-number{color:#ffce87}.lua-comment{color:#8095ae;font-style:italic}
+/* v5.1 — formatting shared with teacher editor */
+.rich-render{line-height:1.7;overflow-wrap:anywhere}
+.rich-render h2{font-size:1.6em;color:#69b6ff;margin:12px 0}
+.rich-render h3{font-size:1.3em;color:#ffb24a;margin:10px 0}
+.rich-render p{margin:8px 0}
+.rich-render ul,.rich-render ol{padding-left:25px;margin:12px 0}
+.rich-render li{margin:6px 0}
+.rich-render blockquote{padding:12px 18px;border-left:4px solid #a882f5;background:#263554;margin:10px 0}
+.lua-line{display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lua-line-emphasis{background:rgba(64,148,248,.24);outline:1px solid rgba(64,148,248,.22);border-radius:3px}
+.theme-pastel .lua-keyword{color:#c8a8ff}.theme-pastel .lua-string{color:#8eddd2}.theme-pastel .lua-number{color:#ffb6a8}.theme-pastel .lua-comment{color:#9aa8c2}
+.theme-mono .lua-keyword,.theme-mono .lua-string,.theme-mono .lua-number,.theme-mono .lua-comment{color:inherit}
+
+.callout-info{background:rgba(67,133,215,.15);border:1px solid #436ea2;border-left:4px solid #58afff;border-radius:12px;padding:20px}
+.callout-warning{background:rgba(220,140,44,.12);border:1px solid #a46b2e;border-left:4px solid #ffbd53;border-radius:12px;padding:20px}
+.callout-success{background:rgba(65,175,133,.12);border:1px solid #367a69;border-left:4px solid #61d6ac;border-radius:12px;padding:20px}
+.callout-purple{background:rgba(144,77,207,.16);border:1px solid #7357ad;border-left:4px solid #bd8aff;border-radius:12px;padding:20px}
+
+/* v5.2: literal custom Lua highlights override syntax themes */
+.lua-custom{font-weight:650;text-shadow:0 0 5px rgba(255,255,255,.06)}
+
+/* v5.3 script revisions: no executable HTML in Lua comparisons */
+.script-diff{background:#101624;color:#cad7ee;border:1px solid #384866;border-radius:10px;padding:12px;overflow:auto;white-space:pre;font:12px/1.7 Consolas,monospace;max-height:360px}
+.script-diff-line{display:block;min-height:1.5em}.script-diff-line.add{background:#163f31;color:#a8f8c3}.script-diff-line.del{background:#512833;color:#ffc0cd}.script-diff-line.info{color:#ffdb8d}
+.script-history,.history-editor{background:#1a263d;border:1px solid #465573;border-radius:10px;padding:12px;margin:12px 0}.script-history summary{cursor:pointer;color:#b8a0ff;font-weight:700}.script-history-item{margin:12px 0;padding:8px;border:1px solid #415171;border-radius:8px}.script-location,.script-insertion{border-left:3px solid #7d9cea;background:#1b2b47;padding:12px;border-radius:6px;margin:12px 0;white-space:pre-wrap}.script-insertion{border-left-color:#f3ba67}
+
+/* Respect non-copy mode in comparison and history, too. UI restriction, not DRM. */
+.no-copy-script .script-diff,.no-copy-script .script-history{-webkit-user-select:none;user-select:none}
+
+/* v5.4: GitHub-style diff. Strike out only removed code, never the +/− gutter. */
+.script-diff-line{display:block;min-height:1.7em;padding:0 6px;white-space:pre;width:max-content;min-width:100%;box-sizing:border-box}
+.script-diff-prefix{display:inline-block;width:2.4ch;margin-right:1ch;text-align:center;user-select:none;-webkit-user-select:none;opacity:.95;font-weight:700}
+.script-diff-line.add{background:#173c2b;color:#b8f2c7;border-left:3px solid #3fbf79}
+.script-diff-line.del{background:#51242e;color:#ffc1ca;border-left:3px solid #f26d7c}
+.script-diff-line.del .script-diff-code{text-decoration:line-through;text-decoration-color:#ff8996;text-decoration-thickness:1.5px;text-decoration-skip-ink:none;opacity:.88}
+.script-diff-line.same{border-left:3px solid transparent}
+.script-diff-line.info{border-left:3px solid #f3ba67}

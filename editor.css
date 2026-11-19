@@ -1,0 +1,48 @@
+.editor-main{max-width:1180px}.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.slots button{border:1px solid #394563;border-radius:9px;background:#17213a;color:#c4d2ed;padding:10px 0;font-size:12px}.slots button.active{background:#514084;border-color:#aa8cff;color:white}.slots button.published:after{content:' •';color:#7bdfaf}.editor-main .field.wide{flex:3;min-width:230px}.editor-main .field{min-width:105px;flex:1}.editor-main .form-row{align-items:end}.editor-main textarea{width:100%;min-height:90px;resize:vertical;background:#0f172c;border:1px solid #344364;color:#f0efff;border-radius:9px;padding:13px;font:inherit}.editor-main input,.editor-main select{width:100%;background:#0f172c;border:1px solid #344364;color:#f0efff;border-radius:9px;padding:12px}.step-card{border:1px solid #3a4766;border-radius:14px;padding:17px;margin:14px 0;background:#111b33}.step-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.step-head input{flex:1;min-width:200px;font-weight:700}.step-body{display:grid;gap:10px}.block-card{background:#0d162b;border:1px solid #374363;padding:14px;border-radius:12px;margin:10px 0}.block-card label{display:block;font-size:12px;color:#afc2e4;margin-bottom:7px}.block-head{display:flex;gap:9px;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap}.block-head strong{font-size:13px;color:#d3b8ff}.block-actions{display:flex;gap:5px}.block-actions button,.step-head button{padding:7px 10px;font-size:12px;border:1px solid #42516d;border-radius:7px;background:#222c46;color:#cbdafa}.block-actions button:disabled,.step-head button:disabled{opacity:.4}.block-actions button.danger{color:#ffb3c1}.add-block{margin-top:13px;display:flex;gap:10px;flex-wrap:wrap}.add-block select{flex:1;max-width:280px}.input-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.input-grid .span2{grid-column:1/-1}.inline-preview{max-width:270px;max-height:160px;border-radius:9px;object-fit:contain;border:1px solid #41486d}.upload-button{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:12px 18px;border:1px solid #4c567b;border-radius:9px;font-weight:700;font-size:12px}.preview-area{background:#171e31;border-radius:10px;padding:10px;color:#aec3e7;font-size:12px}.unknown{border:1px dashed #e7ab5e;padding:13px;border-radius:8px;background:#342519;color:#f3d6a7;white-space:pre-wrap;overflow-wrap:anywhere}.busy{opacity:.6;pointer-events:none}.teacher-tip{background:#252442;padding:12px;border-radius:9px;color:#d7c8ff;font-size:12px}.code-editor{font:13px/1.65 Consolas,monospace!important;tab-size:4;min-height:150px!important}.notice{font-size:12px}.danger{background:#61283c!important;color:#ffe5eb!important}.note{font-size:12px;color:#9eaccb;line-height:1.6}.editor-main .section-head{display:flex;align-items:center;justify-content:space-between}.editor-main .section-head h2{margin:0}.editor-main .primary,.editor-main .secondary{padding:11px 16px}.editor-main .button-row{display:flex;gap:8px;flex-wrap:wrap}@media(max-width:900px){.frame{display:block}.rail{width:auto;min-height:0}.slots{grid-template-columns:repeat(8,1fr)}.editor-main{padding:15px}.input-grid{grid-template-columns:1fr}.input-grid .span2{grid-column:1}}@media(max-width:470px){.slots{grid-template-columns:repeat(4,1fr)}}
+/* v5.1 — rich instruction and Lua editor */
+.rich-label{display:block;margin:8px 0;color:#c8d6f0;font-weight:700!important}
+.rich-toolbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap;padding:8px;background:#1c2743;border:1px solid #465676;border-radius:10px 10px 0 0}
+.rich-toolbar button{border:1px solid #435275;border-radius:6px;background:#2a3554;color:#f5f0ff;padding:7px 10px;cursor:pointer;font-size:13px}
+.rich-toolbar button:hover,.emoji-panel button:hover{background:#54437f}
+.rich-toolbar label{display:inline-flex;align-items:center;gap:5px;margin:0;padding:2px 6px;color:#d9e2fa;font-size:12px}
+.rich-toolbar input[type=color]{width:30px;height:29px;padding:1px;cursor:pointer}
+.rich-toolbar select{width:auto;max-width:145px;padding:6px!important}
+.rich-editor{outline:none;min-height:130px;line-height:1.7;overflow-wrap:anywhere;background:#0e172b;padding:16px;color:#eef2fc;border:1px solid #465676;border-top:0;border-radius:0 0 10px 10px;font-size:15px}
+.rich-editor:focus{border-color:#9974e7;box-shadow:0 0 0 1px #9974e7}
+.rich-editor h2,.rich-render h2{font-size:1.6em;color:#69b6ff;margin:12px 0}
+.rich-editor h3,.rich-render h3{font-size:1.3em;color:#ffb24a;margin:10px 0}
+.rich-editor p,.rich-render p{margin:8px 0}
+.rich-editor ul,.rich-render ul,.rich-editor ol,.rich-render ol{padding-left:25px;margin:12px 0}
+.rich-editor li,.rich-render li{margin:6px 0}
+.rich-editor blockquote,.rich-render blockquote{padding:12px 18px;border-left:4px solid #a882f5;background:#263554;margin:10px 0}
+.emoji-panel{display:flex;flex-wrap:wrap;gap:5px;background:#1a2742;padding:9px;border:1px solid #465676;border-radius:10px;margin-top:7px}
+.emoji-panel[hidden]{display:none}
+.emoji-panel button{font-size:20px;background:#2a3554;border:1px solid #435275;border-radius:6px;cursor:pointer;padding:5px 8px}
+.code-live-preview{margin-top:12px;border:1px solid #354c72;background:#101725;border-radius:10px;overflow:hidden}
+.code-preview-head{padding:9px 14px;background:#1e2a43;color:#b4c5df;font-size:12px}
+.code-live-preview pre{font:13px/1.65 Consolas,monospace;white-space:pre;overflow:auto;padding:14px;tab-size:4;color:#e1eafb;margin:0}
+.lua-line{display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lua-line-emphasis{background:rgba(64,148,248,.23);outline:1px solid rgba(64,148,248,.22);border-radius:3px}
+.lua-keyword{color:#ff6b8a}.lua-string{color:#a2d477}.lua-number{color:#f4bb6b}.lua-comment{color:#8d98af;font-style:italic}
+.theme-pastel .lua-keyword{color:#c8a8ff}.theme-pastel .lua-string{color:#8eddd2}.theme-pastel .lua-number{color:#ffb6a8}.theme-pastel .lua-comment{color:#9aa8c2}
+.theme-mono .lua-keyword,.theme-mono .lua-string,.theme-mono .lua-number,.theme-mono .lua-comment{color:inherit}
+
+/* v5.2: literal custom Lua highlights override syntax themes */
+.lua-custom{font-weight:650;text-shadow:0 0 5px rgba(255,255,255,.06)}
+
+/* v5.3 script revisions: no executable HTML in Lua comparisons */
+.script-diff{background:#101624;color:#cad7ee;border:1px solid #384866;border-radius:10px;padding:12px;overflow:auto;white-space:pre;font:12px/1.7 Consolas,monospace;max-height:360px}
+.script-diff-line{display:block;min-height:1.5em}.script-diff-line.add{background:#163f31;color:#a8f8c3}.script-diff-line.del{background:#512833;color:#ffc0cd}.script-diff-line.info{color:#ffdb8d}
+.script-history,.history-editor{background:#1a263d;border:1px solid #465573;border-radius:10px;padding:12px;margin:12px 0}.script-history summary{cursor:pointer;color:#b8a0ff;font-weight:700}.script-history-item{margin:12px 0;padding:8px;border:1px solid #415171;border-radius:8px}.script-location,.script-insertion{border-left:3px solid #7d9cea;background:#1b2b47;padding:12px;border-radius:6px;margin:12px 0;white-space:pre-wrap}.script-insertion{border-left-color:#f3ba67}
+
+/* v5.4: GitHub-style diff. Strike out only removed code, never the +/− gutter. */
+.script-diff-line{display:block;min-height:1.7em;padding:0 6px;white-space:pre;width:max-content;min-width:100%;box-sizing:border-box}
+.script-diff-prefix{display:inline-block;width:2.4ch;margin-right:1ch;text-align:center;user-select:none;-webkit-user-select:none;opacity:.95;font-weight:700}
+.script-diff-line.add{background:#173c2b;color:#b8f2c7;border-left:3px solid #3fbf79}
+.script-diff-line.del{background:#51242e;color:#ffc1ca;border-left:3px solid #f26d7c}
+.script-diff-line.del .script-diff-code{text-decoration:line-through;text-decoration-color:#ff8996;text-decoration-thickness:1.5px;text-decoration-skip-ink:none;opacity:.88}
+.script-diff-line.same{border-left:3px solid transparent}
+.script-diff-line.info{border-left:3px solid #f3ba67}
+
+/* v5.5 duplication actions */
+.step-head [data-step-copy],.block-actions [data-block-copy]{border-color:#7664ac;color:#d6bbff;background:#292344}
