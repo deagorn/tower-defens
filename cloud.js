@@ -22,7 +22,22 @@ export function connect(){
       script.crossOrigin='anonymous';script.onload=resolve;script.onerror=()=>reject(new Error('Не вдалося завантажити інтерфейс Clerk'));
       document.head.append(script);
     });
-    const clerk=new Clerk(cfg.clerkPublishableKey);
+    
+await clerk.load({
+  ui: {
+    ClerkUI: window.__internal_ClerkUICtor
+  },
+  signInForceRedirectUrl:
+    'https://deagorn.github.io/tower-defens/',
+  signInFallbackRedirectUrl:
+    'https://deagorn.github.io/tower-defens/',
+  signUpForceRedirectUrl:
+    'https://deagorn.github.io/tower-defens/',
+  allowedRedirectOrigins: [
+    'https://deagorn.github.io'
+  ]
+});
+
     await clerk.load({ui:{ClerkUI:window.__internal_ClerkUICtor}});
     const db=createClient(cfg.supabaseUrl,cfg.supabasePublishableKey,{
       accessToken:async()=>clerk.session?.getToken()??null,
