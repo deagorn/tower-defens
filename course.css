@@ -69,3 +69,109 @@
     font-size: 22px;
   }
 }
+/* Tower Defense Academy — відновлення стилів уроку та бокового меню.
+   ДОДАЙ У КІНЕЦЬ course.css. Не замінюй увесь файл цим фрагментом. */
+
+/* Сітка сторінки уроку. Без горизонтального переповнення. */
+body:has(#stepNav) { overflow-x: hidden; }
+body:has(#stepNav) .frame { align-items: stretch; }
+body:has(#stepNav) .rail {
+  width: 280px;
+  min-width: 280px;
+  padding: 24px 14px;
+  gap: 22px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4e5682 transparent;
+}
+body:has(#stepNav) .main { min-width: 0; width: 100%; }
+body:has(#stepNav) .main-inner.course-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 38px 34px 76px;
+}
+body:has(#stepNav) .course-main .hero { flex-wrap: wrap; }
+body:has(#stepNav) .course-main .hero > div { flex: 1 1 490px; min-width: 0; }
+body:has(#stepNav) .course-main .hero h1 { overflow-wrap: anywhere; }
+body:has(#stepNav) .course-main .hero p { max-width: 850px; }
+body:has(#stepNav) .course-main .panel { width: 100%; min-width: 0; }
+body:has(#stepNav) .course-main #blocks { min-width: 0; }
+body:has(#stepNav) .course-main img.course-image { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 12px; }
+body:has(#stepNav) .course-main .course-progress {
+  height: 8px; margin: 18px 0 23px; border-radius: 999px;
+  background: #29334f; overflow: hidden;
+}
+body:has(#stepNav) .course-main #courseProgress {
+  height: 100%; width: 0; border-radius: inherit;
+  background: linear-gradient(90deg, #8276ff, #c17df5);
+  transition: width .2s ease;
+}
+body:has(#stepNav) .course-main .course-actions {
+  display: flex; gap: 12px; justify-content: space-between;
+  border-top: 1px solid #303c5c; margin-top: 24px; padding-top: 20px;
+}
+
+/* Бокове меню: ОКРЕМІ охайні кнопки замість суцільної сірої смуги. */
+#stepNav { width: 100%; min-width: 0; }
+#stepNav .step-menu { display: flex; flex-direction: column; gap: 7px; width: 100%; }
+#stepNav .step-menu button {
+  display: block; width: 100%;
+  appearance: none; -webkit-appearance: none;
+  padding: 12px 13px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: #aebcda;
+  font: 600 13px/1.45 Manrope, system-ui, sans-serif;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+  cursor: pointer;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+#stepNav .step-menu button:hover,
+#stepNav .step-menu button:focus-visible {
+  background: #202b47;
+  color: #f2f3ff;
+  outline: none;
+}
+#stepNav .step-menu button.active {
+  background: linear-gradient(105deg, #39316b, #252749);
+  color: #ffffff;
+  border-color: #8072db;
+  font-weight: 800;
+  box-shadow: inset 3px 0 0 #ae91ff;
+}
+#stepNav .step-menu button.done:not(.active) { color: #8fddc3; }
+#stepNav .step-menu button.done:not(.active)::after { content: ' ✓'; color: #72d9b5; font-weight: 800; }
+#stepNav .step-menu button:focus-visible { outline: 2px solid #a996fa; outline-offset: 2px; }
+
+/* Зберігаємо читабельний текст і підказку в один рядок. */
+.course-main #blocks .tip-card { font-size: 23px; line-height: 1.65; }
+.course-main #blocks .tip-card > p:first-of-type { display: inline; margin: 0; font-size: 18px; }
+
+@media (max-width: 1100px) {
+  body:has(#stepNav) .rail { width: 250px; min-width: 250px; }
+  body:has(#stepNav) .main-inner.course-main { padding: 30px 24px 65px; }
+}
+@media (max-width: 760px) {
+  body:has(#stepNav) .frame { display: block; }
+  body:has(#stepNav) .rail {
+    position: static; width: 100%; min-width: 0; height: auto;
+    max-height: none; overflow: visible; padding: 15px;
+  }
+  #stepNav .step-menu {
+    display: flex; flex-direction: row; overflow-x: auto;
+    scroll-snap-type: x proximity; padding: 4px 0 8px;
+    scrollbar-width: thin;
+  }
+  #stepNav .step-menu button { flex: 0 0 180px; scroll-snap-align: start; font-size: 13px; }
+  body:has(#stepNav) .main-inner.course-main { padding: 23px 15px 55px; }
+  body:has(#stepNav) .course-main .hero > div { flex-basis: 100%; }
+}
