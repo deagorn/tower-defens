@@ -266,3 +266,43 @@ body:has(#stepNav) .course-main img.course-image {
   margin: 16px auto;
   object-fit: contain;
 }
+
+/* Кнопка копіювання промптів і Lua-коду */
+
+.course-main #blocks .lua-box .code-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 18px;
+  border: 1px solid #a38aff;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #7565ee, #a46ce6);
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(117, 101, 238, 0.22);
+  transition: transform .2s, box-shadow .2s, filter .2s;
+}
+
+.course-main #blocks .lua-box .code-copy:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+  box-shadow: 0 7px 20px rgba(117, 101, 238, 0.35);
+}
+
+.course-main #blocks .lua-box .code-copy:active {
+  transform: scale(.97);
+}
+
+.course-main #blocks .lua-box .code-copy:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
