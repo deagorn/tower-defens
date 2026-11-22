@@ -46,3 +46,50 @@
 
 /* v5.5 duplication actions */
 .step-head [data-step-copy],.block-actions [data-block-copy]{border-color:#7664ac;color:#d6bbff;background:#292344}
+/* Tower Defense Academy — fix editor overflow for long AI prompts.
+   Append to the END of editor.css; do not replace existing styles. */
+html, body { max-width: 100%; }
+body:has(.editor-main) { overflow-x: clip; }
+body:has(.editor-main) .frame,
+body:has(.editor-main) .main,
+body:has(.editor-main) .main-inner,
+.editor-main,
+.editor-main #app,
+.editor-main .panel,
+.editor-main #stepsEditor,
+.editor-main .step-card,
+.editor-main .step-body,
+.editor-main .block-card,
+.editor-main .input-grid,
+.editor-main .input-grid > *,
+.editor-main .code-live-preview,
+.editor-main .history-editor,
+.editor-main .script-diff {
+  min-width: 0;
+  max-width: 100%;
+}
+.editor-main .step-card,
+.editor-main .block-card,
+.editor-main .code-live-preview,
+.editor-main .rich-editor { overflow-wrap: anywhere; }
+.editor-main .code-live-preview { overflow: hidden; }
+.editor-main .code-live-preview pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-width: 100%;
+  overflow-x: auto;
+  tab-size: 2;
+}
+.editor-main textarea.code-editor {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: auto;
+}
+.editor-main .script-diff { overflow-x: auto; }
+.editor-main .block-head,
+.editor-main .step-head { min-width: 0; }
