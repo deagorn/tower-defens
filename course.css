@@ -218,3 +218,51 @@ body:has(#stepNav) .course-main .course-actions {
   font-size: 16px;
   line-height: 1.7;
 }
+/* Tower Defense Academy — keep long AI prompts inside lesson content.
+   Append to the END of course.css; do not replace existing styles. */
+body:has(#stepNav) { overflow-x: clip; }
+body:has(#stepNav) .frame,
+body:has(#stepNav) .main,
+body:has(#stepNav) .main-inner,
+body:has(#stepNav) #course,
+body:has(#stepNav) .course-main .panel,
+body:has(#stepNav) .course-main #blocks,
+body:has(#stepNav) .course-main .course-block,
+body:has(#stepNav) .course-main .lua-box {
+  min-width: 0;
+  max-width: 100%;
+}
+body:has(#stepNav) .course-main .lua-box { overflow: hidden; }
+body:has(#stepNav) .course-main .lua-box pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-width: 100%;
+  overflow-x: auto;
+  line-height: 1.7;
+}
+body:has(#stepNav) .course-main .lua-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+body:has(#stepNav) .course-main .lua-top .code-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+body:has(#stepNav) .course-main .script-diff {
+  max-width: 100%;
+  overflow-x: auto;
+}
+body:has(#stepNav) .course-main .rich-render { overflow-wrap: anywhere; }
+body:has(#stepNav) .course-main img.course-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 660px;
+  height: auto;
+  margin: 16px auto;
+  object-fit: contain;
+}
