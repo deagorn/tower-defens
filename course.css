@@ -175,3 +175,46 @@ body:has(#stepNav) .course-main .course-actions {
   body:has(#stepNav) .main-inner.course-main { padding: 23px 15px 55px; }
   body:has(#stepNav) .course-main .hero > div { flex-basis: 100%; }
 }
+
+/* Більший текст для навчальних матеріалів */
+
+.course-main #blocks .course-block,
+.course-main #blocks .rich-render,
+.course-main #blocks .rich-render p,
+.course-main #blocks .rich-render li {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Заголовок кожного кроку */
+.course-main #stepTitle {
+  font-size: 23px;
+  line-height: 1.4;
+}
+
+/* Підказки та перевірки */
+.course-main #blocks .tip-card,
+.course-main #blocks .tip-card p,
+.course-main #blocks .callout-info,
+.course-main #blocks .callout-success,
+.course-main #blocks .callout-warning {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Іконки в підказках */
+.course-main #blocks .tip-card {
+  font-size: 23px;
+}
+
+/* Лампочка та текст на одному рядку */
+.course-main #blocks .tip-card > p:first-of-type {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Код Lua */
+.course-main #blocks .lua-box pre {
+  font-size: 16px;
+  line-height: 1.7;
+}
