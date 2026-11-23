@@ -1,5 +1,6 @@
 // Tower Defense Academy · демонстраційний урок
 // Прогрес зберігається у Supabase через авторизований Clerk акаунт.
+
 const STORAGE_KEY = 'tda_base_health_demo_v1';
 const baseHealthCode = `local Workspace = game:GetService("Workspace")
 local ServerScriptService = game:GetService("ServerScriptService")

@@ -1,40 +1,387 @@
-.course-main{max-width:1050px}.course-progress{height:8px;background:#25304c;border-radius:99px;overflow:hidden;margin:10px 0 24px}.course-progress div{height:100%;width:0;background:linear-gradient(90deg,#648dff,#b16bf6);transition:width .2s}.course-actions{display:flex;justify-content:space-between;gap:10px;margin-top:25px;padding-top:20px;border-top:1px solid #34405e}.course-actions button{padding:14px 22px}.course-block{margin:20px 0;line-height:1.8}.course-block p{white-space:pre-wrap;overflow-wrap:anywhere}.course-block h3{font-size:17px}.course-block .code-title{font:700 12px Manrope,sans-serif;letter-spacing:.5px;color:#c8b7ff}.lua-box{border:1px solid #303b57;border-left:4px solid #70aaff;background:#111521;border-radius:12px;overflow:hidden;margin:12px 0}.lua-top{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:12px 17px;border-bottom:1px solid #313950}.lua-top button{padding:7px 12px;border:1px solid #4f5972;border-radius:8px;background:#2b3040;color:#f1f3fe}.lua-box pre{white-space:pre;overflow:auto;margin:0;padding:18px;font:13px/1.7 Consolas,'Courier New',monospace;color:#e0e6ff;tab-size:4}.lua-box.no-copy pre{-webkit-user-select:none;user-select:none}.lua-box.no-copy{border-left-color:#b87bfa}.lua-muted{color:#a2b2d0;font-size:12px}.course-image{width:100%;max-height:650px;object-fit:contain;border:1px solid #35415b;border-radius:12px;background:#101729}.course-caption{font-size:12px;color:#a9b9d6}.embed-container{position:relative;width:100%;padding-top:56.25%;border:1px solid #374262;border-radius:13px;overflow:hidden;background:#080b14}.embed-container iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.extra-card{border:1px solid #7e59bb;background:#27223e;border-radius:13px;padding:20px}.tip-card{border-left:4px solid #f0c56b;background:#282638;border-radius:10px;padding:15px}.step-menu{display:grid;gap:7px}.step-menu button{padding:12px;text-align:left;background:#17213a;border:1px solid #333e5f;border-radius:9px;color:#cad7f0;font:inherit;font-size:12px;cursor:pointer}.step-menu button.active{background:#3b3565;border-color:#9c75e8}.step-menu button.done:before{content:'✓ ';color:#82dfaf}.course-block hr{border:0;border-top:1px solid #46506b;margin:25px 0}.unknown-block{border:1px dashed #ae915e;padding:15px;border-radius:9px;color:#e5d5b3}.course-main h2{font-size:23px;margin-top:4px}@media(max-width:900px){.frame{display:block}.rail{width:auto;min-height:auto}.course-main{padding:15px}.course-actions button{flex:1}}
+/* Tower Defense Academy — readable lesson content, 2026-11-21
+   Додай цей блок У КІНЕЦЬ course.css, після всіх наявних правил. */
 
-.lua-keyword{color:#df94ff}.lua-string{color:#99df9e}.lua-number{color:#ffce87}.lua-comment{color:#8095ae;font-style:italic}
-/* v5.1 — formatting shared with teacher editor */
-.rich-render{line-height:1.7;overflow-wrap:anywhere}
-.rich-render h2{font-size:1.6em;color:#69b6ff;margin:12px 0}
-.rich-render h3{font-size:1.3em;color:#ffb24a;margin:10px 0}
-.rich-render p{margin:8px 0}
-.rich-render ul,.rich-render ol{padding-left:25px;margin:12px 0}
-.rich-render li{margin:6px 0}
-.rich-render blockquote{padding:12px 18px;border-left:4px solid #a882f5;background:#263554;margin:10px 0}
-.lua-line{display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.lua-line-emphasis{background:rgba(64,148,248,.24);outline:1px solid rgba(64,148,248,.22);border-radius:3px}
-.theme-pastel .lua-keyword{color:#c8a8ff}.theme-pastel .lua-string{color:#8eddd2}.theme-pastel .lua-number{color:#ffb6a8}.theme-pastel .lua-comment{color:#9aa8c2}
-.theme-mono .lua-keyword,.theme-mono .lua-string,.theme-mono .lua-number,.theme-mono .lua-comment{color:inherit}
+/* Основний навчальний текст: зручніший розмір і відступи. */
+.course-main #blocks .course-block {
+  font-size: 18px;
+  line-height: 1.75;
+}
+.course-main #blocks .course-block p,
+.course-main #blocks .course-block li {
+  font-size: 18px;
+  line-height: 1.75;
+}
+.course-main #blocks .course-block h3 {
+  font-size: 21px;
+  line-height: 1.4;
+}
+.course-main #blocks .rich-render li {
+  margin: 9px 0;
+}
 
-.callout-info{background:rgba(67,133,215,.15);border:1px solid #436ea2;border-left:4px solid #58afff;border-radius:12px;padding:20px}
-.callout-warning{background:rgba(220,140,44,.12);border:1px solid #a46b2e;border-left:4px solid #ffbd53;border-radius:12px;padding:20px}
-.callout-success{background:rgba(65,175,133,.12);border:1px solid #367a69;border-left:4px solid #61d6ac;border-radius:12px;padding:20px}
-.callout-purple{background:rgba(144,77,207,.16);border:1px solid #7357ad;border-left:4px solid #bd8aff;border-radius:12px;padding:20px}
+/* Підказка: іконка та перший абзац на ОДНОМУ рядку.
+   Код сайту додає 💡 як текст, а blockRich() повертає <p>. */
+.course-main #blocks .tip-card {
+  font-size: 23px; /* розмір іконки 💡 */
+  line-height: 1.7;
+  padding: 18px 20px;
+}
+.course-main #blocks .tip-card > p:first-of-type {
+  display: inline;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.75;
+}
+.course-main #blocks .tip-card > p:not(:first-of-type) {
+  margin: 10px 0 0;
+}
 
-/* v5.2: literal custom Lua highlights override syntax themes */
-.lua-custom{font-weight:650;text-shadow:0 0 5px rgba(255,255,255,.06)}
+/* Навчальні картки — читабельніші. */
+.course-main #blocks .callout-info,
+.course-main #blocks .callout-warning,
+.course-main #blocks .callout-success,
+.course-main #blocks .callout-purple,
+.course-main #blocks .extra-card {
+  padding: 20px 22px;
+}
+.course-main #blocks .course-caption,
+.course-main #blocks .lua-muted {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.course-main #blocks .lua-box pre {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.course-main #blocks .lua-top .code-title {
+  font-size: 15px;
+}
 
-/* v5.3 script revisions: no executable HTML in Lua comparisons */
-.script-diff{background:#101624;color:#cad7ee;border:1px solid #384866;border-radius:10px;padding:12px;overflow:auto;white-space:pre;font:12px/1.7 Consolas,monospace;max-height:360px}
-.script-diff-line{display:block;min-height:1.5em}.script-diff-line.add{background:#163f31;color:#a8f8c3}.script-diff-line.del{background:#512833;color:#ffc0cd}.script-diff-line.info{color:#ffdb8d}
-.script-history,.history-editor{background:#1a263d;border:1px solid #465573;border-radius:10px;padding:12px;margin:12px 0}.script-history summary{cursor:pointer;color:#b8a0ff;font-weight:700}.script-history-item{margin:12px 0;padding:8px;border:1px solid #415171;border-radius:8px}.script-location,.script-insertion{border-left:3px solid #7d9cea;background:#1b2b47;padding:12px;border-radius:6px;margin:12px 0;white-space:pre-wrap}.script-insertion{border-left-color:#f3ba67}
+/* На невеликих екранах не зменшуємо текст до мікророзміру. */
+@media (max-width: 600px) {
+  .course-main #blocks .course-block,
+  .course-main #blocks .course-block p,
+  .course-main #blocks .course-block li,
+  .course-main #blocks .tip-card > p:first-of-type {
+    font-size: 17px;
+  }
+  .course-main #blocks .tip-card {
+    font-size: 22px;
+  }
+}
+/* Tower Defense Academy — відновлення стилів уроку та бокового меню.
+   ДОДАЙ У КІНЕЦЬ course.css. Не замінюй увесь файл цим фрагментом. */
 
-/* Respect non-copy mode in comparison and history, too. UI restriction, not DRM. */
-.no-copy-script .script-diff,.no-copy-script .script-history{-webkit-user-select:none;user-select:none}
+/* Сітка сторінки уроку. Без горизонтального переповнення. */
+body:has(#stepNav) { overflow-x: hidden; }
+body:has(#stepNav) .frame { align-items: stretch; }
+body:has(#stepNav) .rail {
+  width: 280px;
+  min-width: 280px;
+  padding: 24px 14px;
+  gap: 22px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4e5682 transparent;
+}
+body:has(#stepNav) .main { min-width: 0; width: 100%; }
+body:has(#stepNav) .main-inner.course-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 38px 34px 76px;
+}
+body:has(#stepNav) .course-main .hero { flex-wrap: wrap; }
+body:has(#stepNav) .course-main .hero > div { flex: 1 1 490px; min-width: 0; }
+body:has(#stepNav) .course-main .hero h1 { overflow-wrap: anywhere; }
+body:has(#stepNav) .course-main .hero p { max-width: 850px; }
+body:has(#stepNav) .course-main .panel { width: 100%; min-width: 0; }
+body:has(#stepNav) .course-main #blocks { min-width: 0; }
+body:has(#stepNav) .course-main img.course-image { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 12px; }
+body:has(#stepNav) .course-main .course-progress {
+  height: 8px; margin: 18px 0 23px; border-radius: 999px;
+  background: #29334f; overflow: hidden;
+}
+body:has(#stepNav) .course-main #courseProgress {
+  height: 100%; width: 0; border-radius: inherit;
+  background: linear-gradient(90deg, #8276ff, #c17df5);
+  transition: width .2s ease;
+}
+body:has(#stepNav) .course-main .course-actions {
+  display: flex; gap: 12px; justify-content: space-between;
+  border-top: 1px solid #303c5c; margin-top: 24px; padding-top: 20px;
+}
 
-/* v5.4: GitHub-style diff. Strike out only removed code, never the +/− gutter. */
-.script-diff-line{display:block;min-height:1.7em;padding:0 6px;white-space:pre;width:max-content;min-width:100%;box-sizing:border-box}
-.script-diff-prefix{display:inline-block;width:2.4ch;margin-right:1ch;text-align:center;user-select:none;-webkit-user-select:none;opacity:.95;font-weight:700}
-.script-diff-line.add{background:#173c2b;color:#b8f2c7;border-left:3px solid #3fbf79}
-.script-diff-line.del{background:#51242e;color:#ffc1ca;border-left:3px solid #f26d7c}
-.script-diff-line.del .script-diff-code{text-decoration:line-through;text-decoration-color:#ff8996;text-decoration-thickness:1.5px;text-decoration-skip-ink:none;opacity:.88}
-.script-diff-line.same{border-left:3px solid transparent}
-.script-diff-line.info{border-left:3px solid #f3ba67}
+/* Бокове меню: ОКРЕМІ охайні кнопки замість суцільної сірої смуги. */
+#stepNav { width: 100%; min-width: 0; }
+#stepNav .step-menu { display: flex; flex-direction: column; gap: 7px; width: 100%; }
+#stepNav .step-menu button {
+  display: block; width: 100%;
+  appearance: none; -webkit-appearance: none;
+  padding: 12px 13px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: #aebcda;
+  font: 600 13px/1.45 Manrope, system-ui, sans-serif;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+  cursor: pointer;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+#stepNav .step-menu button:hover,
+#stepNav .step-menu button:focus-visible {
+  background: #202b47;
+  color: #f2f3ff;
+  outline: none;
+}
+#stepNav .step-menu button.active {
+  background: linear-gradient(105deg, #39316b, #252749);
+  color: #ffffff;
+  border-color: #8072db;
+  font-weight: 800;
+  box-shadow: inset 3px 0 0 #ae91ff;
+}
+#stepNav .step-menu button.done:not(.active) { color: #8fddc3; }
+#stepNav .step-menu button.done:not(.active)::after { content: ' ✓'; color: #72d9b5; font-weight: 800; }
+#stepNav .step-menu button:focus-visible { outline: 2px solid #a996fa; outline-offset: 2px; }
+
+/* Зберігаємо читабельний текст і підказку в один рядок. */
+.course-main #blocks .tip-card { font-size: 23px; line-height: 1.65; }
+.course-main #blocks .tip-card > p:first-of-type { display: inline; margin: 0; font-size: 18px; }
+
+@media (max-width: 1100px) {
+  body:has(#stepNav) .rail { width: 250px; min-width: 250px; }
+  body:has(#stepNav) .main-inner.course-main { padding: 30px 24px 65px; }
+}
+@media (max-width: 760px) {
+  body:has(#stepNav) .frame { display: block; }
+  body:has(#stepNav) .rail {
+    position: static; width: 100%; min-width: 0; height: auto;
+    max-height: none; overflow: visible; padding: 15px;
+  }
+  #stepNav .step-menu {
+    display: flex; flex-direction: row; overflow-x: auto;
+    scroll-snap-type: x proximity; padding: 4px 0 8px;
+    scrollbar-width: thin;
+  }
+  #stepNav .step-menu button { flex: 0 0 180px; scroll-snap-align: start; font-size: 13px; }
+  body:has(#stepNav) .main-inner.course-main { padding: 23px 15px 55px; }
+  body:has(#stepNav) .course-main .hero > div { flex-basis: 100%; }
+}
+
+/* Більший текст для навчальних матеріалів */
+
+.course-main #blocks .course-block,
+.course-main #blocks .rich-render,
+.course-main #blocks .rich-render p,
+.course-main #blocks .rich-render li {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Заголовок кожного кроку */
+.course-main #stepTitle {
+  font-size: 23px;
+  line-height: 1.4;
+}
+
+/* Підказки та перевірки */
+.course-main #blocks .tip-card,
+.course-main #blocks .tip-card p,
+.course-main #blocks .callout-info,
+.course-main #blocks .callout-success,
+.course-main #blocks .callout-warning {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Іконки в підказках */
+.course-main #blocks .tip-card {
+  font-size: 23px;
+}
+
+/* Лампочка та текст на одному рядку */
+.course-main #blocks .tip-card > p:first-of-type {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Код Lua */
+.course-main #blocks .lua-box pre {
+  font-size: 16px;
+  line-height: 1.7;
+}
+/* Tower Defense Academy — keep long AI prompts inside lesson content.
+   Append to the END of course.css; do not replace existing styles. */
+body:has(#stepNav) { overflow-x: clip; }
+body:has(#stepNav) .frame,
+body:has(#stepNav) .main,
+body:has(#stepNav) .main-inner,
+body:has(#stepNav) #course,
+body:has(#stepNav) .course-main .panel,
+body:has(#stepNav) .course-main #blocks,
+body:has(#stepNav) .course-main .course-block,
+body:has(#stepNav) .course-main .lua-box {
+  min-width: 0;
+  max-width: 100%;
+}
+body:has(#stepNav) .course-main .lua-box { overflow: hidden; }
+body:has(#stepNav) .course-main .lua-box pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-width: 100%;
+  overflow-x: auto;
+  line-height: 1.7;
+}
+body:has(#stepNav) .course-main .lua-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+body:has(#stepNav) .course-main .lua-top .code-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+body:has(#stepNav) .course-main .script-diff {
+  max-width: 100%;
+  overflow-x: auto;
+}
+body:has(#stepNav) .course-main .rich-render { overflow-wrap: anywhere; }
+body:has(#stepNav) .course-main img.course-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 660px;
+  height: auto;
+  margin: 16px auto;
+  object-fit: contain;
+}
+
+/* Кнопка копіювання промптів і Lua-коду */
+
+.course-main #blocks .lua-box .code-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 18px;
+  border: 1px solid #a38aff;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #7565ee, #a46ce6);
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(117, 101, 238, 0.22);
+  transition: transform .2s, box-shadow .2s, filter .2s;
+}
+
+.course-main #blocks .lua-box .code-copy:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+  box-shadow: 0 7px 20px rgba(117, 101, 238, 0.35);
+}
+
+.course-main #blocks .lua-box .code-copy:active {
+  transform: scale(.97);
+}
+
+.course-main #blocks .lua-box .code-copy:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+/* Новий дизайн блоків для копіювання */
+
+.course-main #blocks .lua-box {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  overflow: hidden;
+  background: #141821;
+  border: 1px solid #41465a;
+  border-left: 4px solid #8c7aff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px #0003;
+}
+
+/* Верхня панель картки */
+.course-main #blocks .lua-box .lua-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+  margin: 0;
+  background: #222738;
+  border-bottom: 1px solid #41465a;
+}
+
+/* Назва промпту або скрипта */
+.course-main #blocks .lua-box .code-title {
+  flex: 1;
+  min-width: 160px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #e2ddff;
+}
+
+/* Компактна кнопка у правому куті */
+.course-main #blocks .lua-box .code-copy {
+  margin-left: auto;
+  padding: 9px 13px;
+  border: 1px solid #68718b;
+  border-radius: 9px;
+  background: #373e56;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.course-main #blocks .lua-box .code-copy:hover {
+  background: #595080;
+  border-color: #b49aff;
+  box-shadow: none;
+  filter: none;
+}
+
+/* Увесь текст для копіювання всередині картки */
+.course-main #blocks .lua-box > pre {
+  display: block;
+  margin: 0;
+  padding: 20px 22px;
+  border: 0;
+  background: #141821;
+  color: #edf0ff;
+  font-size: 16px;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .course-main #blocks .lua-box > pre {
+    padding: 16px;
+    font-size: 15px;
+  }
+}

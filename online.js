@@ -151,7 +151,12 @@ async function boot(){
   ctx=await connect();
   if(!ctx.clerk.user){
    status('● ПОТРІБЕН ВХІД');$('#auth').innerHTML='<div class="login-card"><h2>Вхід у Tower Defense Academy</h2><p>Увійди за логіном і паролем, створеними викладачем.</p><div id="sign-in"></div></div>';
-   ctx.clerk.mountSignIn($('#sign-in'));return;
+   
+ctx.clerk.mountSignIn($('#sign-in'), {
+  forceRedirectUrl: 'https://deagorn.github.io/tower-defens/'
+});
+return;
+
   }
   profile=await getProfile(ctx.db,myId(ctx.clerk));if(!profile){renderMissing();return;}
   await fetchData();listen();
