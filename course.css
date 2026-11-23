@@ -306,3 +306,82 @@ body:has(#stepNav) .course-main img.course-image {
   outline: 2px solid #c4b5fd;
   outline-offset: 3px;
 }
+
+/* Новий дизайн блоків для копіювання */
+
+.course-main #blocks .lua-box {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  overflow: hidden;
+  background: #141821;
+  border: 1px solid #41465a;
+  border-left: 4px solid #8c7aff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px #0003;
+}
+
+/* Верхня панель картки */
+.course-main #blocks .lua-box .lua-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+  margin: 0;
+  background: #222738;
+  border-bottom: 1px solid #41465a;
+}
+
+/* Назва промпту або скрипта */
+.course-main #blocks .lua-box .code-title {
+  flex: 1;
+  min-width: 160px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #e2ddff;
+}
+
+/* Компактна кнопка у правому куті */
+.course-main #blocks .lua-box .code-copy {
+  margin-left: auto;
+  padding: 9px 13px;
+  border: 1px solid #68718b;
+  border-radius: 9px;
+  background: #373e56;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.course-main #blocks .lua-box .code-copy:hover {
+  background: #595080;
+  border-color: #b49aff;
+  box-shadow: none;
+  filter: none;
+}
+
+/* Увесь текст для копіювання всередині картки */
+.course-main #blocks .lua-box > pre {
+  display: block;
+  margin: 0;
+  padding: 20px 22px;
+  border: 0;
+  background: #141821;
+  color: #edf0ff;
+  font-size: 16px;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .course-main #blocks .lua-box > pre {
+    padding: 16px;
+    font-size: 15px;
+  }
+}
