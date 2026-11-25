@@ -402,3 +402,51 @@ body:has(#stepNav) .course-main img.course-image {
   background: transparent;
 }
 
+/* Підсвічування Lua-коду в уроках */
+
+/* Ключові слова: local, return, function */
+.course-main #blocks .lua-box .lua-keyword {
+  color: #ff6b8a;
+}
+
+/* Числа */
+.course-main #blocks .lua-box .lua-number {
+  color: #f4bb6b;
+}
+
+/* Рядки */
+.course-main #blocks .lua-box .lua-string {
+  color: #a2d477;
+}
+
+/* Коментарі */
+.course-main #blocks .lua-box .lua-comment {
+  color: #8d98af;
+  font-style: italic;
+}
+
+/* Рядки, які викладач виділив */
+.course-main #blocks .lua-box .lua-line-emphasis {
+  background: rgba(64,148,248,.23);
+  border-radius: 3px;
+}
+
+/* Пастельна тема */
+.course-main #blocks .theme-pastel .lua-keyword {
+  color: #c8a8ff;
+}
+.course-main #blocks .theme-pastel .lua-number {
+  color: #ffb6a8;
+}
+.course-main #blocks .theme-pastel .lua-string {
+  color: #8eddd2;
+}
+
+/* Тема без підсвічування */
+.course-main #blocks .theme-mono .lua-keyword,
+.course-main #blocks .theme-mono .lua-number,
+.course-main #blocks .theme-mono .lua-string,
+.course-main #blocks .theme-mono .lua-comment {
+  color: inherit;
+}
+
