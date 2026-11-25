@@ -385,3 +385,20 @@ body:has(#stepNav) .course-main img.course-image {
     font-size: 15px;
   }
 }
+
+/* Забороняємо виділення коду,
+   якщо викладач вимкнув копіювання */
+
+.course-main #blocks .lua-box.no-copy pre,
+.course-main #blocks .lua-box.no-copy pre * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Прибираємо виділення тексту */
+.course-main #blocks .lua-box.no-copy pre::selection,
+.course-main #blocks .lua-box.no-copy pre *::selection {
+  background: transparent;
+}
+
